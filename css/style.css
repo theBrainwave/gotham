@@ -1,0 +1,476 @@
+/*------- CSS RESET----------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-spacing: 0;
+}
+
+/*------BASE STYLE-----*/
+
+
+@font-face {
+	font-family: Roboto-regular;
+	src: url('../fonts/Roboto-regular.ttf') format('truetype'),
+	     url('../fonts/Roboto-regular.woff') format('woff');
+	font-weight: 300;     
+}
+
+body{
+	font-size: 16px;
+	font-family: Roboto;
+}
+
+/*==============================*/
+/*========= HEADER ==========*/
+
+.page-header, .page-footer{
+	width: 100%;
+	height: 67px;
+	background-color: #f7c61d;
+	
+}
+
+.wrapper{
+	width: 1170px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.page-header .wrapper, .page-footer .wrapper{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.page-header nav ul{
+	display: flex;
+	justify-content: space-between;
+
+}
+.page-header nav a{
+	font-family: Helvetica; /* This is suppose to be Proxima regular*/
+	color: black;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0px 35px;
+
+}
+/*-------------------------------*/
+/*========== MAIN ============*/
+/*============================*/
+
+.main>.wrapper {
+	display: flex;
+}
+
+
+main{
+	width: 77%;
+}
+
+.right-sidebar{
+	width: 23%;
+}
+
+img{
+	width: 100%;
+}
+
+article{
+	display: flex;
+	margin-bottom: 50px;
+}
+
+
+h2{
+	font-family: proxima;
+	font-weight: bold;
+	font-size: 24px;
+	margin: 40px 0 15px;
+}
+
+article h3{
+	font-family: proxima;
+	font-size: 30px;
+	font-weight: lighter;
+}
+
+.article-left{
+	width: 30%;
+	border-radius: 3%;
+}
+
+.article-right{
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	padding-left: 25px;
+	justify-content: space-between;
+}
+
+.meta{
+	font-family: Roboto;
+	font-weight: 300;
+	color: #999;
+	font-size: 13px;
+}
+
+.meta span::after {
+	display: inline-block;
+	content: '|';
+	color: #999;
+	font-size: 13px;
+}
+
+.meta span:last-child::after {
+	display: none;
+}
+
+.category{
+	color: #e3b002;
+}
+
+.description{
+	color: #555;
+	font-size: 16px;
+	font-family: Roboto;
+	line-height: 1.6;
+
+}
+
+.article-right .meta {
+	margin: 18px 0; 
+
+}
+
+.description::after {
+	content: ">";
+	color: #e3b002;
+
+}
+
+.additional{
+	color: #999;
+	font-family: Roboto;
+	font-weight: 300;
+
+}
+
+.views::after {
+	content: '|';
+	margin: 0 10px;
+}
+
+.comments{
+	color: #e3b002;
+}
+
+.views::before, .comments::before {
+	content: '\f06e';
+	font-family: 'Font Awesome 5 Free';
+	font-size: 16px;
+	margin-right: 10px;
+}
+
+.comments::before {
+	content: '\f075';
+	color: #999;
+}
+
+.more{
+	width: 170px;
+	height: 47px;
+	color: #000;
+	background: transparent;
+	font-family: Roboto;
+	text-transform: uppercase;
+	border: 1px solid #e3b002;
+	border-radius: 5px;
+	text-align: center;
+	outline: none;
+	margin: 0 auto;
+	display: block;
+}
+
+
+/*===============================*/
+/*-------------------------------*/
+/*========== ASIDE ============*/
+
+aside.right-sidebar{
+	padding-top: 78px;
+	padding-left: 65px;
+}
+
+.searchbox{
+	width: 100%;
+	position: relative;
+}
+
+.searchbox label {
+	position: absolute;
+	left: 10px;
+	top: 8px;
+	z-index: 100;
+}
+
+.searchbox input{
+	width: 100%;
+	border-radius: 10px;
+	padding: 8px 10px 8px 30px;
+	outline: none;
+	border: 1px solid #e5e5e5;
+	font-family: Roboto;
+	font-size: 14px;
+	box-sizing: border-box;
+
+}
+
+.calender-widget{
+	border: 1px solid #e5e5e5;
+	width: 100%;
+	border-radius: 10px;
+	margin-top: 38px;
+}
+
+.calender-widget table{
+	width: calc(100% + 4px);
+	margin-left: -2px;
+}
+
+.calender-widget table th {
+	height: 26px;
+	background: #e7e7e7;
+	color: #888;
+	text-align: center;
+	vertical-align: middle;
+ 
+}
+
+.calender-widget table td {
+	height: 33px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #e5e5e5;
+	color: #e5e5e5;
+ 
+}
+
+.calender-widget .current-month {
+	color: #4d4d4d;
+
+}
+
+.calender-widget .calender-top{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 30px;
+	width: 100%;
+	border-radius: 10px 10px 0 0;
+	
+}
+
+.calender-widget tr:last-child td:first-child {
+	border-radius: 0 0 0 10px;
+
+}
+
+.calender-widget tr:last-child td:last-child {
+	border-radius: 0 0 10px;
+
+}
+
+
+.calender-prev .calender-next{
+	color: #e5e5e5;
+}
+
+.calender-widget .current-day {
+	background-color: #f7c61d;
+	color: #fff;
+
+}
+
+.popular-news article {
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.popular-news h3 {
+	font-size: 16px;
+	font-family: Roboto;
+	line-height: 1.2;
+	margin-top: 10px;
+}
+
+.popular-news h2 {
+	font-family: Proxima;
+	font-size: 18px;
+	font-weight: bold;
+	display: flex;
+	white-space: nowrap;
+	align-items: center;
+}
+
+.popular-news h2::after {
+	display: block;
+	width: 100%;
+	height: 1px;
+	border-top: 1px solid #e5e5e5;
+	content: '.';
+	font-size: 0;
+	margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*===============================*/
+/*-------------------------------*/
+/*========== FOOTER ============*/
+
+.page-footer{
+	margin: 300px 0px 0px;
+}
+
+.page-footer>.wrapper>*{
+	width: 33.33%;
+}
+
+.copy{
+	font-family: proxima;
+	font-weight: 300;
+	font-size: 13px;
+	color: #a78613;
+}
+.social{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.social a{
+	display: block;
+	width: 45px;
+	height: 45px;
+	background: #fff;
+	border-radius: 50%;
+	color: #f7c61d;
+	font-size: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	margin-left: 10px;
+}
+
+.page-footer nav ul{
+	display: inline;
+	justify-content: space-between;
+
+}
+.footer-nav a{
+	text-decoration: none;
+	color: #000;
+	padding: 0 18px;
+}
+
+
+
+/*.page-footer nav ul{
+	display: inline;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 12px;
+}
+
+.page-footer .wrapper{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+.page-footer{
+	width: 100%;
+	height: 67px;
+	background-color: #f7c61d;
+	margin-top: 300px;
+}
+
+.page-footer nav a{
+	font-family: Helvetica; /* This is suppose to be Proxima regular*/
+	/*color: black;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0px 35px;
+	
+
+}
+.copy{
+	font-family: Proxima;
+	font-size: 13px;
+	font-weight: 300;
+	color: #a78613;
+}
+
+.social{
+	display: flex;
+}
+
+.social a{
+	display: block;
+	width: 45px;
+	height: 45px;
+	background: #fff;
+	border-radius: 50%;
+	display: flex;
+	font-size: 24px;
+	justify-content: center;
+	align-items: center;
+}
